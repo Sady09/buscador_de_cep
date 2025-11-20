@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro via CEP - Emsoft</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar" style="background-color: #343351">
+      <div class="container d-flex align-items-center">
+        <img
+          src="https://www.emsoft.inf.br/wp-content/uploads/2018/08/logo_horizontal_208x52_orange.png"
+          height="40"
+          alt="Emsoft"
+        />
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="card shadow p-4">
+        <h3 class="text-center mb-3" style="color: #343351">
+          Cadastro de Endereço
+        </h3>
+
+        <!-- Campo de CEP -->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            id="cep"
+            maxlength="8"
+            class="form-control form-control-lg"
+            placeholder="Digite o CEP (somente números)"
+          />
+          <button
+            class="btn btn-lg text-white"
+            id="buscar"
+            style="background: #343351"
+          >
+            Buscar
+          </button>
+        </div>
+
+        <!-- Compos que serão preenchidos -->
+        <form id="form-endereco" class="d-none mt-3">
+          <div class="mb-2">
+            <label class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="logradouro" />
+          </div>
+
+          <div class="mb-2">
+            <label class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro" />
+          </div>
+
+          <div class="mb-2">
+            <label class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" />
+          </div>
+
+          <div class="mb-2">
+            <label class="form-label">Estado</label>
+            <input type="text" class="form-control" id="estado" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">País</label>
+            <input type="text" class="form-control" value="Brasil" />
+          </div>
+
+          <button
+            type="submit"
+            class="btn text-white w-100"
+            style="background: #343351"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
